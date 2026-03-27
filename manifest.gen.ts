@@ -2,6 +2,7 @@
 // This file SHOULD be checked into source version control.
 // This file is automatically updated during development when running `dev.ts`.
 
+import * as $$$$$$$$$$$0 from "./apps/breton.ts";
 import * as $$$0 from "./loaders/Author.ts";
 import * as $$$4 from "./loaders/Blogpost.ts";
 import * as $$$1 from "./loaders/BlogPostItem.ts";
@@ -31,36 +32,39 @@ import * as $$$$$$15 from "./sections/types.ts";
 
 const manifest = {
   "loaders": {
-    "blog/loaders/Author.ts": $$$0,
-    "blog/loaders/Blogpost.ts": $$$4,
-    "blog/loaders/BlogPostItem.ts": $$$1,
-    "blog/loaders/BlogpostList.ts": $$$5,
-    "blog/loaders/BlogpostListing.ts": $$$6,
-    "blog/loaders/BlogPostPage.ts": $$$2,
-    "blog/loaders/BlogRelatedPosts.ts": $$$3,
-    "blog/loaders/Category.ts": $$$7,
-    "blog/loaders/ContentTypes.ts": $$$8,
-    "blog/loaders/GetCategories.ts": $$$9,
+    "site/loaders/Author.ts": $$$0,
+    "site/loaders/Blogpost.ts": $$$4,
+    "site/loaders/BlogPostItem.ts": $$$1,
+    "site/loaders/BlogpostList.ts": $$$5,
+    "site/loaders/BlogpostListing.ts": $$$6,
+    "site/loaders/BlogPostPage.ts": $$$2,
+    "site/loaders/BlogRelatedPosts.ts": $$$3,
+    "site/loaders/Category.ts": $$$7,
+    "site/loaders/ContentTypes.ts": $$$8,
+    "site/loaders/GetCategories.ts": $$$9,
   },
   "sections": {
-    "blog/sections/Blog/components/ImageAndTextSection.tsx": $$$$$$0,
-    "blog/sections/Blog/components/ImagesSlide.tsx": $$$$$$3,
-    "blog/sections/Blog/components/ImageThreeColumnSection.tsx": $$$$$$1,
-    "blog/sections/Blog/components/ImageTwoColumnSection.tsx": $$$$$$2,
-    "blog/sections/Blog/components/OneImage.tsx": $$$$$$4,
-    "blog/sections/Blog/components/ProductsSection.tsx": $$$$$$5,
-    "blog/sections/Blog/components/RelatedPosts.tsx": $$$$$$6,
-    "blog/sections/Blog/components/TextSection.tsx": $$$$$$7,
-    "blog/sections/Blog/components/Video.tsx": $$$$$$8,
-    "blog/sections/BlogBannerPost.tsx": $$$$$$9,
-    "blog/sections/BlogPosts.tsx": $$$$$$10,
-    "blog/sections/BlogTemplate.tsx": $$$$$$11,
-    "blog/sections/Seo/SeoBlogPost.tsx": $$$$$$12,
-    "blog/sections/Seo/SeoBlogPostListing.tsx": $$$$$$13,
-    "blog/sections/Template.tsx": $$$$$$14,
-    "blog/sections/types.ts": $$$$$$15,
+    "site/sections/Blog/components/ImageAndTextSection.tsx": $$$$$$0,
+    "site/sections/Blog/components/ImagesSlide.tsx": $$$$$$3,
+    "site/sections/Blog/components/ImageThreeColumnSection.tsx": $$$$$$1,
+    "site/sections/Blog/components/ImageTwoColumnSection.tsx": $$$$$$2,
+    "site/sections/Blog/components/OneImage.tsx": $$$$$$4,
+    "site/sections/Blog/components/ProductsSection.tsx": $$$$$$5,
+    "site/sections/Blog/components/RelatedPosts.tsx": $$$$$$6,
+    "site/sections/Blog/components/TextSection.tsx": $$$$$$7,
+    "site/sections/Blog/components/Video.tsx": $$$$$$8,
+    "site/sections/BlogBannerPost.tsx": $$$$$$9,
+    "site/sections/BlogPosts.tsx": $$$$$$10,
+    "site/sections/BlogTemplate.tsx": $$$$$$11,
+    "site/sections/Seo/SeoBlogPost.tsx": $$$$$$12,
+    "site/sections/Seo/SeoBlogPostListing.tsx": $$$$$$13,
+    "site/sections/Template.tsx": $$$$$$14,
+    "site/sections/types.ts": $$$$$$15,
   },
-  "name": "blog",
+  "apps": {
+    "site/apps/breton.ts": $$$$$$$$$$$0,
+  },
+  "name": "site",
   "baseUrl": import.meta.url,
 };
 
