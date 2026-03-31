@@ -21,7 +21,7 @@ export interface Props {
 }
 
 export default function RelatedPostsSection(
-  props: Awaited<ReturnType<typeof loader>>
+  props: Awaited<ReturnType<typeof loader>>,
 ) {
   if (!props) return null;
 
@@ -38,8 +38,11 @@ export default function RelatedPostsSection(
         <h3 class="text-h4Mobile md:text-h4 uppercase">{title}</h3>
       </div>
       <div class="gap-x-4 md:gap-x-10 flex overflow-auto max-md:px-6 scroll-smooth snap-x snap-mandatory">
-        {relatedPosts.map(post => (
-          <a href={`/blog/${post.slug}`} class="flex flex-col gap-4 snap-center max-md:min-w-full">
+        {relatedPosts.map((post) => (
+          <a
+            href={`/blog/${post.slug}`}
+            class="flex flex-col gap-4 snap-center max-md:min-w-full"
+          >
             <Image
               width={384}
               height={400}
@@ -86,10 +89,10 @@ export async function loader(
     CTAText = "Ver matéria",
   }: Props,
   _req: Request,
-  ctx: AppContext
+  ctx: AppContext,
 ) {
   if (!post) return null;
-  const categories = post.categories.map(item => item.slug);
+  const categories = post?.categories?.map((item) => item.slug);
   if (!categories || categories.length < 1) return null;
   const relatedPosts = (await ctx.invoke("blog/loaders/BlogRelatedPosts.ts", {
     count: 3,

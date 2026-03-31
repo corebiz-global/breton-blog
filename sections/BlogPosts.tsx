@@ -12,7 +12,7 @@ export interface CTA {
 export interface Post {
   url?: string;
   title?: string;
-  author?: string;
+  author: string;
   excerpt?: string;
   image?: ImageWidget;
   date?: string;
@@ -98,12 +98,18 @@ export default function BlogPosts({
                           month: "long",
                           day: "numeric",
                           year: "numeric",
-                        }
+                        },
                       )
                     : ""}
                 </span>
-                <span>-</span>
-                <span>{post.authors[0]?.name}</span>
+                {post?.authors?.length > 0 ? (
+                  <>
+                    <span>-</span>
+                    <span>{post?.authors[0]?.name}</span>
+                  </>
+                ) : (
+                  <></>
+                )}
               </div>
               <h2 class="text-h5Mobile md:text-h5 uppercase md:pr-6">
                 {post.title}
