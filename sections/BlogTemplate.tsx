@@ -43,13 +43,12 @@ export default function Template({ post }: Props) {
           class="hidden md:flex btn btn-ghost no-animation text-[11px] not-italic font-medium leading-6 tracking-[2.64px] uppercase"
           hx-on:click={useScript(() => {
             event?.stopPropagation();
-            const hostname = globalThis.window.location.hostname
+            const hostname = globalThis.window.location.hostname;
             const lastUrl = document.referrer;
             if (lastUrl && new URL(lastUrl).hostname === hostname) {
               globalThis.window.history.back();
-            }
-            else {
-              globalThis.window.location.href = "/"
+            } else {
+              globalThis.window.location.href = "/";
             }
           })}
         >
@@ -60,7 +59,8 @@ export default function Template({ post }: Props) {
           {constants[lang]["back-button"]}
         </button>
         <p class="w-full text-center text-[10px] not-italic font-normal leading-4 tracking-[2.4px] uppercase mb-2">
-          {formattedDate?.toUpperCase()} - {authors[0]?.name}
+          {formattedDate?.toUpperCase()}
+          {authors?.length > 0 && <>- {authors[0]?.name}</>}
         </p>
         <h1 class="w-full max-w-[800px] text-[22px] text-center font-semibold leading-8 tracking-[1.76px] uppercase mx-auto my-0 px-4 text-black">
           {title}
