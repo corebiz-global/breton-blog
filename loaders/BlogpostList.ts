@@ -77,6 +77,5 @@ export default async function BlogPostList(
 
   const slicedPosts = slicePosts(handledPosts, pageNumber, postsPerPage);
 
-  // return handledPosts
   return handledPosts.length > 0 ? handledPosts : null;
 }
