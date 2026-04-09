@@ -7,7 +7,7 @@ import { type Section } from "@deco/deco/blocks";
  */
 export interface Author {
     name: string;
-    email: string;
+    email?: string;
     avatar?: ImageWidget;
     jobTitle?: string;
     company?: string;
@@ -28,7 +28,7 @@ export interface BlogPost {
      * @widget blog
      * @collection authors
      */
-    authors: Author[];
+    authors?: Author[];
     /**
      * @widget blog
      * @collection categories
